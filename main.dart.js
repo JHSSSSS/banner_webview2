@@ -6,7 +6,7 @@ if(!b.hasOwnProperty(q))b[q]=a[q]}}function mixinPropertiesEasy(a,b){Object.assi
 s.prototype={p:{}}
 var r=new s()
 if(!(r.__proto__&&r.__proto__.p===s.prototype.p))return false
-try{if(typeof navigator!="undefined"&&typeof navigator.userAgent=="string"&&navigator.userAgent.indexOf("Chrome/")>=0)return true
+try{true
 if(typeof version=="function"&&version.length==0){var q=version()
 if(/^\d+\.\d+\.\d+\.\d+$/.test(q))return true}}catch(p){}return false}()
 function setFunctionNamesIfNecessary(a){function t(){};if(typeof t.name=="string")return
@@ -108,10 +108,10 @@ else if(B.c.A(b,"trident/7.0"))return B.dk
 else if(a===""&&B.c.A(b,"firefox"))return B.ao
 A.GW("WARNING: failed to detect current browser engine.")
 return B.rn},
-ah0(){var s,r,q,p=window.navigator.platform
+ah0(){var s,r,q,p=null
 p.toString
 s=p
-r=window.navigator.userAgent
+r=null
 if(B.c.bi(s,"Mac")){q=window.navigator.maxTouchPoints
 if((q==null?0:q)>2)return B.V
 return B.an}else if(B.c.A(s.toLowerCase(),"iphone")||B.c.A(s.toLowerCase(),"ipad")||B.c.A(s.toLowerCase(),"ipod"))return B.V
@@ -120,7 +120,7 @@ else if(B.c.bi(s,"Linux"))return B.lN
 else if(B.c.bi(s,"Win"))return B.lO
 else return B.Aq},
 ahs(){var s=$.cZ()
-return s===B.V&&B.c.A(window.navigator.userAgent,"OS 15_")},
+return true},
 uK(){var s,r=A.vq(1,1)
 if(B.a1.uJ(r,"webgl2")!=null){s=$.cZ()
 if(s===B.V)return 1
@@ -6847,7 +6847,7 @@ J.fK(a,new A.Yl(s))
 return s},
 a5E(a){var s=Object.getPrototypeOf(a)
 return s===Object.prototype||s===null},
-Ji(){return window.navigator.userAgent},
+Ji(){return ""},
 WM:function WM(){},
 WN:function WN(a,b){this.a=a
 this.b=b},
@@ -31786,7 +31786,7 @@ A.Ye.prototype={
 $0(){return null},
 $S:130}
 A.Xl.prototype={
-$0(){var s=window.navigator.platform,r=s==null?null:s.toLowerCase()
+$0(){var s=null,r=s==null?null:s.toLowerCase()
 if(r==null)r=""
 if(B.c.bi(r,"mac"))return B.d3
 if(B.c.bi(r,"win"))return B.d4
@@ -48213,7 +48213,7 @@ B.rH=function() {
 B.rM=function(getTagFallback) {
   return function(hooks) {
     if (typeof navigator != "object") return hooks;
-    var ua = navigator.userAgent;
+    var ua = "";
     if (ua.indexOf("DumpRenderTree") >= 0) return hooks;
     if (ua.indexOf("Chrome") >= 0) {
       function confirm(p) {
@@ -50340,7 +50340,7 @@ $.ae3=!1
 $.aH=null
 $.bs=1})();(function lazyInitializers(){var s=hunkHelpers.lazyFinal,r=hunkHelpers.lazy
 s($,"akX","a7t",()=>new A.OM(A.v(t.N,t.BO),A.v(t.S,t.Q)))
-s($,"ajX","bq",()=>A.ah_(A.uV().navigator.vendor,B.c.Ct(A.uV().navigator.userAgent)))
+s($,"ajX","bq",()=>A.ah_(A.uV().navigator.vendor,B.c.Ct({})))
 s($,"akq","cZ",()=>A.ah0())
 r($,"aid","a0p",()=>A.y8(8))
 s($,"ak_","H6",()=>J.a11(J.Z9(A.V())))
